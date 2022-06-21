@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 400px;
+    background-color: #1F2937;
+}
+
+.header-logo {
+    padding: 10px;
+    margin-left: 48px;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul{
+    list-style-type: none;
+    padding:0;
+    display: inline-flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    padding: 1em;
+}
+
+a {
+    font-size: 18px;
+    color:#E5E7EB;
+    text-decoration: none;
+}
