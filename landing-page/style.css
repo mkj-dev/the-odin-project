@@ -3,7 +3,8 @@ body {
     padding: 0;
 }
 
-header {
+/* navigation-header */
+.navigation-header {
     height: 400px;
     background-color: #1F2937;
 }
@@ -12,6 +13,7 @@ header {
     padding: 10px;
     margin-left: 48px;
 }
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -33,4 +35,17 @@ a {
     font-size: 18px;
     color:#E5E7EB;
     text-decoration: none;
+}
+
+/* .information-header */ 
+
+#information {
+	background-color: #fff;
+}
+
+.information-header h2 {
+	font-size: 36px;
+	color: #1F2937;
+	font-weight: extra-bold;
+	text-align: center;
 }
