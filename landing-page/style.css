@@ -136,3 +136,16 @@ button:hover {
 	color: #3882F6;
 	background-color: #fff;
 }
+
+/* footer */
+
+footer {
+	color: #fff;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	background-color: #1F2937;
+	
+}
