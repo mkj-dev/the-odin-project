@@ -77,3 +77,22 @@ p.flex-item {
 	display: flex;
 	width: 150px;
 }
+
+/* #quote-section */
+
+#quote-section {
+	height: 400px;
+	background-color: #E5E7EB;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 36px;
+}
+
+#quote-section p {
+	padding: 0 36px;
+	text-align: center;
+	font-size: 36px;
+	font-style: italic;
+	color: #1F2937;
+}
