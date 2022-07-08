@@ -1,7 +1,5 @@
-const playerSelection = prompt('Type what do you choose - Rock, paper or scissors: ');
-const computerSelection = computerPlay();
-
-console.log(playRound(cleanInput(playerSelection), computerSelection));
+game();
+//console.log(playRound(cleanInput(playerSelection), computerSelection));
 
 // Clean user's input
 // Make only first letter of input uppercase
@@ -21,7 +19,6 @@ function computerPlay() {
 
 // Play one round with the computer
 function playRound(playerSelection, computerSelection) {
-	// Testing
 	console.log('Player: ', playerSelection);
 	console.log('Computer: ', computerSelection);
 	
@@ -37,3 +34,14 @@ function playRound(playerSelection, computerSelection) {
 		return 'Player wins!';
 	}
 }
+
+// Playing the game 5 times
+function game() {
+	for (let i = 1; i <= 5; i++) {
+		const playerSelection = prompt('Type what do you choose - Rock, paper or scissors: ');
+		const computerSelection = computerPlay();
+		console.log('Game: ', i);
+		console.log(playRound(cleanInput(playerSelection), computerSelection));
+	}
+}
+
