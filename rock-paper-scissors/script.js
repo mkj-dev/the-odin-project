@@ -1,7 +1,16 @@
 const playerSelection = prompt('Type what do you choose - Rock, paper or scissors: ');
 const computerSelection = computerPlay();
 
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(cleanInput(playerSelection), computerSelection));
+
+// Clean user's input
+// Make only first letter of input uppercase
+function cleanInput(string) {
+	string = string.toLowerCase();
+	upperCaseLetter = string[0].toUpperCase();
+	string = string.replace(string[0], upperCaseLetter);
+	return string;
+}
 
 // Generate a random choice from choices array
 function computerPlay() {
