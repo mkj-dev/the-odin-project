@@ -1,25 +1,37 @@
 const display = document.querySelector('#display');
 const buttons = document.querySelectorAll('button');
 
+// Player score
+const score = document.querySelector('#score');
+let playerScore = 0;
+
 // Add event listener to every button
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const computerSelection = computerPlay();
         const playerSelection = cleanInput(button.value);
+
         console.log(playerSelection);
         console.log(computerSelection);
+        console.log('Score: ', playerScore);
 
         // Play one round with the computer
         if (playerSelection === computerSelection) {
-            console.log('It\'s a draw!');
+            display.textContent = 'It\'s a draw!';
         } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
-            console.log('Computer wins!');
+            display.textContent = 'Computer wins!';
         } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-            console.log('Computer wins!');
+            display.textContent = 'Computer wins!';
         } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-            console.log('Computer wins!');
+            display.textContent = 'Computer wins!';
         } else {
-            console.log('Player wins!');
+            display.textContent = 'Player score +1!';
+            playerScore++;
+            score.textContent = playerScore;
+
+            if (playerScore === 5) {
+                display.textContent = 'Player wins!';
+            }
         }
     });
 });
