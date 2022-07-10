@@ -1,4 +1,4 @@
-game();
+// game();
 //console.log(playRound(cleanInput(playerSelection), computerSelection));
 
 // Clean user's input
