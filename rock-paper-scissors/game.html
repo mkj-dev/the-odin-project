@@ -8,20 +8,27 @@
   <title>Rock, paper, scissors!</title>
   <script src="game-script.js" defer></script>
   <style>
+    #container {
+      text-align: center;
+    }
+
     #display {
       border: 1px solid black;
       width: 200px;
       height: 100px;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
-  <div id="display"></div>
-  <p>Player score: <span id="score">0</span></p>
-  <button id="rock" value="rock">Rock</button>
-  <button id="paper" value="paper">Paper</button>
-  <button id="scissors" value="scissors">Scissors</button>
+  <div id="container">
+    <div id="display"></div>
+    <p>Player score: <span id="score">0</span></p>
+    <button id="rock" value="rock">Rock</button>
+    <button id="paper" value="paper">Paper</button>
+    <button id="scissors" value="scissors">Scissors</button>
+  </div>
 </body>
 
 </html>
