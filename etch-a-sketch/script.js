@@ -1,9 +1,14 @@
+// Body
+const body = document.querySelector('body');
+body.style.textAlign = 'center';
+
+// Main container
 const container = document.querySelector('#container');
+container.setAttribute('style', 'max-width: 960px; border: 1px solid black; margin: 0 auto; padding: 16px')
 
 // Etch-a-sketch square block
 const square = document.createElement('div');
 square.setAttribute('style', 'width: 10px; height: 10px; border: 1px solid black; display: inline-block');
-
 
 // Custom <br> tag
 const br = document.createElement('span');
