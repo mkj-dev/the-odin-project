@@ -14,3 +14,11 @@ function subtract(...args) {
     }
     return result;
 }
+
+function multiply(...args) {
+    let result = args[0];
+    args.forEach(arg => {
+        result *= arg;
+    });
+    return result;
+}
