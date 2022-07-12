@@ -22,3 +22,15 @@ function multiply(...args) {
     });
     return result;
 }
+
+function divide(...args) {
+    let result = args[0];
+    for (let i = 1; i < args.length; i++) {
+        if (args[i] === 0) {
+            alert('You can\'t do that!');
+        } else {
+            result /= args[i];
+        }
+    }
+    return result;
+}
