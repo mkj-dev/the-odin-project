@@ -4,6 +4,7 @@ const container = document.querySelector('#container');
 const square = document.createElement('div');
 square.setAttribute('style', 'width: 10px; height: 10px; border: 1px solid black; display: inline-block');
 
+
 // Custom <br> tag
 const br = document.createElement('span');
 br.setAttribute('style', 'display: block; margin-bottom: -0.38em;');
@@ -19,4 +20,11 @@ while (i < 16) {
             i++
         }
     }
+}
+
+// Draw on mouse over
+for (let n = 0; n < container.childNodes.length; n++) {
+    container.childNodes[n].addEventListener('mouseover', () => {
+        container.childNodes[n].style.backgroundColor = 'black';
+    });    
 }
