@@ -32,6 +32,23 @@ while (i < 16) {
         }
     }
 }
+
+btnPrompt.addEventListener('click', () => {
+    container.textContent = '';
+    const userChoice = parseInt(prompt('What size should the grid be? Max. 25.'));
+    let i = 0;
+    while (i < userChoice) { 
+        for (let j = 0; j < userChoice; j++) {
+            container.appendChild(square);
+            container.innerHTML += '';
+            if (j === userChoice - 1) {
+                container.appendChild(br);
+                i++
+            }
+        }
+    }
+});
+
 // Draw on mouse over
 for (let n = 0; n < container.childNodes.length; n++) {
     container.childNodes[n].addEventListener('mouseover', () => {
