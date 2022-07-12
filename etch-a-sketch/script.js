@@ -22,8 +22,15 @@ body.insertBefore(btnPrompt, container);
 
 btnPrompt.addEventListener('click', () => {
     container.textContent = '';
-    const userChoice = parseInt(prompt('What size should the grid be? Max. 25.'));
-    displayGrid(userChoice);
+    while(true) {
+        const userChoice = parseInt(prompt('What size should the grid be? Max. 25.'));
+        if(userChoice > 25) {
+            alert('Grid size is too big! Max. 25.');
+        } else {
+            displayGrid(userChoice);
+            break;
+        }
+    }
 });
 
 // Display 16x16 grid of squares
