@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <script src="script.js" defer></script>
-    <script src="functions.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Calculator</h1>
     <div id="container">
@@ -23,12 +24,15 @@
         <button value="8">8</button>
         <button value="9">9</button><br>
         <button value="0">0</button>
-        <button id="add" value="+">+</button>
-        <button id="subtract" value="-">-</button><br>
-        <button id="multiply" value="*">*</button>
-        <button id="divide" value="/">/</button>
-        <button id="equals" value="=">=</button><br>
+        <button id="add" class="operator" value="+">+</button>
+        <button id="subtract" class="operator" value="-">-</button><br>
+        <button id="multiply" class="operator" value="*">*</button>
+        <button id="divide" class="operator" value="/">/</button>
+        <button id="equals" class="operator" value="=">=</button><br>
         <button id="clear" value="clear">Clear</button>
     </div>
+
+    <script src="functions.js"></script>
 </body>
+
 </html>
