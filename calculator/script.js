@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('button');
+const operators = document.querySelectorAll('.operator');
 
 // Convert button node list to an array
 const buttonArr = [...buttons];
@@ -11,6 +12,8 @@ const addBtn = document.getElementById('add');
 const subtractBtn = document.getElementById('subtract');
 const multiplyBtn = document.getElementById('multiply');
 const divideBtn = document.getElementById('divide');
+const equalsBtn = document.getElementById('equals');
+
 // Clear button
 const clearBtn = document.getElementById('clear');
 
@@ -23,3 +26,15 @@ buttonArr.forEach(btn => {
         display.value += btn.value;
     });
 });
+
+const valuesArr = []
+operators.forEach(operator => {
+    operator.addEventListener('click', () => {
+        valuesArr.push(parseInt(display.value));
+        console.log(valuesArr);
+        display.value= null;
+    });
+})
+
+// Clear display screen
+clearBtn.addEventListener('click', clearDisplay);
