@@ -12,3 +12,10 @@ const clearBtn = document.getElementById('clear');
 
 // Make input #display disabled
 display.disabled = true;
+
+// Display button values
+buttons.forEach(btn => {
+    btn.addEventListener('click',()=> {
+        display.value += btn.value;
+    });
+});
