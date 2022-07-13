@@ -34,3 +34,9 @@ function divide(...args) {
     }
     return result;
 }
+
+// Clear function
+const clearDisplay = () => {
+    console.log('clearDisplay was called');
+    display.value = null;
+}
