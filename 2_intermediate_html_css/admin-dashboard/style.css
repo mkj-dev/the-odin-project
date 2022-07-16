@@ -1,5 +1,6 @@
 html, body {
     margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
@@ -15,6 +16,13 @@ html, body {
     "sidebar main-content";
 }
 
+.icon {
+    position: relative;
+    top: 5px;
+    margin-right: 4px;
+    width: 28px;
+}
+
 .header {
     background-color: #f8f8f8;
     grid-area: header;
@@ -23,6 +31,23 @@ html, body {
 .sidebar {
     background-color: #5dbeff;
     grid-area: sidebar;
+    color: #fff;
+}
+
+.sidebar h2 {
+    margin-bottom: 64px;
+}
+
+.dashboard-links ul li {
+    padding: 0;
+    margin: 1rem;
+    text-align: left;
+    list-style-type: none;
+}
+
+.dashboard-links ul li a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .main-content {
