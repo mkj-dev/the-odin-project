@@ -24,12 +24,6 @@ html, body {
     width: 28px;
 }
 
-.icon-large {
-    position: relative;
-    top: 1rem;
-    width: 42px;
-}
-
 .icon.search {
     top: 8px;
 }
