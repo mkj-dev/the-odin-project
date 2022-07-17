@@ -8,7 +8,7 @@ html, body {
     text-align: center;
     box-sizing: border-box;
     display: grid;
-    grid-template: repeat(4, 1fr) / 1fr 3fr;
+    grid-template: repeat(4, 1fr) / 1fr 4fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main-content"
@@ -16,6 +16,7 @@ html, body {
     "sidebar main-content";
 }
 
+/* Icons */
 .icon {
     position: relative;
     top: 5px;
@@ -23,9 +24,53 @@ html, body {
     width: 28px;
 }
 
+.icon-large {
+    position: relative;
+    top: 1rem;
+    width: 42px;
+}
+
+.icon.search {
+    top: 8px;
+}
+
+/* Header */
 .header {
     background-color: #f8f8f8;
     grid-area: header;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 2fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+
+.header > .search {
+    margin-left: 1rem;
+}
+
+.search #search-box {
+    min-width: 400px;
+    height: 24px;
+    border: transparent;
+    border-radius: 16px;
+    background-color: #dbdada;
+}
+
+.header > .profile-big {
+    margin-left: 1.5rem;
+}
+
+.header .user-name {
+    display: inline-block;
+}
+
+button {
+    padding: 8px 24px;
+    color: #fff;
+    background-color: #5dbeff;
+    border: transparent;
+    border-radius: 16px;
+    cursor: pointer;
 }
 
 .sidebar {
