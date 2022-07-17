@@ -19,7 +19,7 @@ html, body {
 /* Icons */
 .icon {
     position: relative;
-    top: 5px;
+    top: 6px;
     margin-right: 4px;
     width: 28px;
 }
@@ -56,11 +56,11 @@ html, body {
     background-color: #dbdada;
 }
 
-.header > .profile-big {
+.header .profile-big {
     margin-left: 1.5rem;
 }
 
-.header .user-name {
+.user-name {
     display: inline-block;
 }
 
@@ -71,6 +71,7 @@ button {
     border: transparent;
     border-radius: 16px;
     cursor: pointer;
+    margin: 8px;
 }
 
 /* Sidebar */
@@ -152,7 +153,13 @@ button {
 }
 
 .trending {
-    background-color: palegreen;
+    background-color: #fff;
     grid-area: trending;
     margin: 12px 12px 0 0;
+    padding: 8px;
+    text-align: left;
+    border-radius: 8px;
+    -webkit-box-shadow: 10px 8px 20px -12px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 10px 8px 20px -12px rgba(66, 68, 90, 1);
+    box-shadow: 10px 8px 20px -12px rgba(66, 68, 90, 1);
 }
