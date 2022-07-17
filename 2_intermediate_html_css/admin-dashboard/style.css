@@ -4,16 +4,16 @@ html, body {
 }
 
 .container {
-    height: 100vh;
+    height: 100v;
     text-align: center;
     box-sizing: border-box;
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr 4fr;
-    grid-template-areas: 
-    "sidebar header"
-    "sidebar main-content"
-    "sidebar main-content"
-    "sidebar main-content";
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main-content"
+        "sidebar main-content"
+        "sidebar main-content";
 }
 
 /* Icons */
@@ -73,6 +73,7 @@ button {
     cursor: pointer;
 }
 
+/* Sidebar */
 .sidebar {
     background-color: #5dbeff;
     grid-area: sidebar;
@@ -95,7 +96,32 @@ button {
     color: #fff;
 }
 
+/* Main content */
 .main-content {
     background-color: #dbdada;
     grid-area: main-content;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template-areas: 
+    "projects annoucements"
+    "projects trending";
+}
+
+.projects {
+    background-color: rebeccapurple;
+    grid-area: projects;
+}
+
+.projects .card {
+    border: 1px solid black;
+}
+
+.annoucements {
+    background-color: teal;
+    grid-area: annoucements;
+}
+
+.trending {
+    background-color: palegreen;
+    grid-area: trending;
 }
