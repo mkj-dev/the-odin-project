@@ -14,7 +14,11 @@ btnAddBook.addEventListener('click', () => {
     let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, isRead.checked);
     myLibrary.push(newBook);
     console.log(myLibrary);
-})
+    bookTitle.value = '';
+    bookAuthor.value = 5;
+    bookPages.value = '';
+    isRead.checked = false;
+});
 
 // Show library array
 btnShowLibrary.addEventListener('click', () => {
