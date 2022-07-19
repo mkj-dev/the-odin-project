@@ -18,11 +18,23 @@ btnAddBook.addEventListener('click', () => {
 
 // Show library array
 btnShowLibrary.addEventListener('click', () => {
+    library.innerHTML = '';
     myLibrary.forEach(book => {
-        // console.log(book);
-        library.innerHTML += 'Book title : ' + book.title + '<br>'; 
+        library.innerHTML += 'Book title : ' + book.title + '<span class="icon">&times;</span>' + '<br>'; 
         library.innerHTML += 'Book author: ' + book.author + '<br>'; 
         library.innerHTML += 'Number of pages: ' + book.pages + '<br>'; 
         library.innerHTML += 'Is the book read?: ' + book.isRead + '<br><hr>'; 
+    });
+
+    // Books node list
+    const booksToRemove = document.querySelectorAll('div#library .icon');
+
+    // Delete book from node list
+    booksToRemove.forEach(book => {
+        book.addEventListener('click', () => {
+            for (let i = 0; i < myLibrary.length; i++) {
+                myLibrary.splice(i,1);
+            }
+        });
     });
 });
