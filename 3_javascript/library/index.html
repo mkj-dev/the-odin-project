@@ -9,16 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-        <label for="bookTitle">Title: </label>
-        <input type="text" name="bookTitle" id="bookTitle" maxlength="60">
-        <label for="bookAuthor">Author: </label>
-        <input type="text" name="bookAuthor" id="bookAuthor" maxlength="50">
-        <label for="bookPages">Number of pages: </label>
-        <input type="number" name="bookPages" id="bookPages" min="5" max="2000">
-        <label for="isRead">Is the book read? </label>
-        <input type="checkbox" name="isRead" id="isRead">
-        <button type="button" id="addBook">Add new book</button>
-    </form>
+    <h2>Library App</h2>
+    <button type="button" id="openModal">New book</button>
+    <div id="formModal">
+        <div class="icon">
+            <span>&times;</span>
+        </div>
+            <form action="">
+            <label for="bookTitle">Title: </label>
+            <input type="text" name="bookTitle" id="bookTitle" maxlength="60">
+            <label for="bookAuthor">Author: </label>
+            <input type="text" name="bookAuthor" id="bookAuthor" maxlength="50">
+            <label for="bookPages">Number of pages: </label>
+            <input type="number" name="bookPages" id="bookPages" min="5" max="2000" value="5">
+            <label for="isRead">Is the book read? </label>
+            <input type="checkbox" name="isRead" id="isRead">
+            <button type="button" id="addBook">Add new book</button>
+        </form>
+    </div>
 </body>
 </html>
