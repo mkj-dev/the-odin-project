@@ -1,7 +1,60 @@
-form label {
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 16px;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+/* Close icon */
+.icon span{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+div#formModal {
+    display: none;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    padding: 8px;
+    max-width: 360px;
+    -webkit-box-shadow: 9px 3px 20px -4px rgba(185, 185, 187, 1);
+    -moz-box-shadow: 9px 3px 20px -4px rgba(185, 185, 187, 1);
+    box-shadow: 9px 3px 20px -4px rgba(185, 185, 187, 1);
+}
+
+form > * {
     display: block;
+    margin: 0 auto;
+}
+
+label {
+    text-align: center;
+    margin: 4px;
+}
+
+/* Buttons */
+button {
+    color: #fff;
+    background-color: #8FC8F3;
+    padding: 8px 24px;
+    border: transparent;
+    border-radius: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button#openModal {
+    display: block;
+    margin: 16px auto;
 }
 
 button#addBook {
-    display: block;
+    margin-top: 16px;
 }
