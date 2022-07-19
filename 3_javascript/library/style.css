@@ -17,6 +17,7 @@ h2 {
     cursor: pointer;
 }
 
+/* Form modal */
 div#formModal {
     display: none;
     margin: 0 auto;
@@ -40,6 +41,10 @@ label {
 }
 
 /* Buttons */
+#controls {
+    text-align: center;
+}
+
 button {
     color: #fff;
     background-color: #8FC8F3;
@@ -50,11 +55,19 @@ button {
     cursor: pointer;
 }
 
-button#openModal {
-    display: block;
+button#openModal, button#showLibrary {
+    display: inline-block;
     margin: 16px auto;
 }
 
 button#addBook {
     margin-top: 16px;
+}
+
+/* Library */
+div#library {
+    padding: 8px;
+    text-align: center;
+    max-width: 400px;
+    margin: 24px auto;
 }
