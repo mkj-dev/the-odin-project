@@ -20,9 +20,9 @@ btnAddBook.addEventListener('click', () => {
 btnShowLibrary.addEventListener('click', () => {
     myLibrary.forEach(book => {
         // console.log(book);
-        library.innerHTML += book.title + '<br>'; 
-        library.innerHTML += book.author+ '<br>'; 
-        library.innerHTML += book.pages+ '<br>'; 
-        library.innerHTML += book.isRead+ '<br><hr>'; 
+        library.innerHTML += 'Book title : ' + book.title + '<br>'; 
+        library.innerHTML += 'Book author: ' + book.author + '<br>'; 
+        library.innerHTML += 'Number of pages: ' + book.pages + '<br>'; 
+        library.innerHTML += 'Is the book read?: ' + book.isRead + '<br><hr>'; 
     });
 });
