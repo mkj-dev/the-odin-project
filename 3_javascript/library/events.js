@@ -15,24 +15,16 @@ btnAddBook.addEventListener('click', () => {
     myLibrary.push(newBook);
     console.log(myLibrary);
     bookTitle.value = '';
-    bookAuthor.value = 5;
-    bookPages.value = '';
+    bookAuthor.value = '';
+    bookPages.value = 5;
     isRead.checked = false;
 });
 
 // Show library array
 btnShowLibrary.addEventListener('click', () => {
     library.innerHTML = '';
-    if (myLibrary.length === 0) {
-        library.innerHTML += 'Your library is empty...';
-    }
     
-    myLibrary.forEach(book => {
-        library.innerHTML += 'Book title : ' + book.title + '<span class="icon">&times;</span>' + '<br>'; 
-        library.innerHTML += 'Book author: ' + book.author + '<br>'; 
-        library.innerHTML += 'Number of pages: ' + book.pages + '<br>'; 
-        library.innerHTML += 'Is the book read?: ' + book.isRead + '<br><hr>'; 
-    });
+    showLibrary();
 
     // Books node list
     const booksToRemove = document.querySelectorAll('div#library .icon');
@@ -46,3 +38,16 @@ btnShowLibrary.addEventListener('click', () => {
         });
     });
 });
+
+const showLibrary = () => {
+    if (myLibrary.length === 0) {
+        library.innerHTML += 'Your library is empty...';
+    }
+
+    myLibrary.forEach(book => {
+        library.innerHTML += 'Book title : ' + book.title + '<span class="icon">&times;</span>' + '<br>'; 
+        library.innerHTML += 'Book author: ' + book.author + '<br>'; 
+        library.innerHTML += 'Number of pages: ' + book.pages + '<br>'; 
+        library.innerHTML += 'Is the book read?: ' + book.isRead + '<br><hr>'; 
+    });
+}
