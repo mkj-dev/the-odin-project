@@ -23,6 +23,10 @@ btnAddBook.addEventListener('click', () => {
 // Show library array
 btnShowLibrary.addEventListener('click', () => {
     library.innerHTML = '';
+    if (myLibrary.length === 0) {
+        library.innerHTML += 'Your library is empty...';
+    }
+    
     myLibrary.forEach(book => {
         library.innerHTML += 'Book title : ' + book.title + '<span class="icon">&times;</span>' + '<br>'; 
         library.innerHTML += 'Book author: ' + book.author + '<br>'; 
