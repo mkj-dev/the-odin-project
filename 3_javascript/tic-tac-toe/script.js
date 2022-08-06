@@ -67,3 +67,21 @@ document.addEventListener('click', event => {
         }
     })
 });
+
+
+const resetButton = document.querySelector('.reset-button');
+
+resetButton.addEventListener('click', () => {
+    document.querySelectorAll('.block').forEach(block => {
+        block.classList.remove('disabled', 'x', 'o');
+    });
+
+    element = document.querySelector('h3');
+    if(element !== null){
+        element.remove();
+    }
+
+    game.xTurn = true;
+    game.xState = [];
+    game.oState = [];
+});
