@@ -21,6 +21,7 @@ h2 {
 }
 
 .block {
+    cursor: pointer;
     background-color: #cfcfcf;
     width: 60px;
     height: 40px;
