@@ -13,7 +13,7 @@ h2 {
 .container {
     display: grid;
     grid-template: repeat(3, 60px) / repeat(3, 80px);
-    border: 1px solid #000;
+    border: 1px solid transparent;
     max-width: fit-content;
     align-items: center;
     justify-items: center;
@@ -40,9 +40,22 @@ h2 {
 }
 
 .block:not(.disabled):hover {
-    background: #eee;
+    background: #969595;
 }
 
 .disabled {
     cursor: not-allowed;
+}
+
+.reset-button {
+    margin: 16px auto;
+    padding: 8px 24px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #ec5151;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background: #d38282;
 }
