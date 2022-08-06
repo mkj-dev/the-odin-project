@@ -33,17 +33,37 @@ document.addEventListener('click', event => {
             game.xState.push(cellValue);
         else
             game.oState.push(cellValue);
-        // console.log('X:', game.xState);
-        // console.log('O', game.oState);
 
         target.classList.add('disabled');
         target.classList.add(game.xTurn ? 'x' : 'o');
         game.xTurn = !game.xTurn;
     }
 
+    // Check for a draw
     if (document.querySelectorAll('body > div > div.block.disabled').length === 9) {
         const h3 = document.createElement('h3');
         h3.innerText = 'Draw!';
         document.querySelector('h2').appendChild(h3);
     }
+
+    // Check which player won
+    game.winningStates.forEach(winningState => {
+        const xWins = winningState.every(state => game.xState.includes(state));
+        const oWins = winningState.every(state => game.oState.includes(state));
+
+        if (xWins || oWins) {
+            if (xWins) {
+                const h3 = document.createElement('h3');
+                h3.style.color = '#3EC70B';
+                h3.innerText = 'X wins!';
+                document.querySelector('h2').appendChild(h3);
+            } else {
+                const h3 = document.createElement('h3');
+                h3.style.color = '#FF5733';
+                h3.innerText = 'O wins!';
+                document.querySelector('h2').appendChild(h3);
+            }
+            document.querySelectorAll('.block').forEach(block => block.classList.add('disabled'));
+        }
+    })
 });
