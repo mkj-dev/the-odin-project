@@ -25,4 +25,24 @@ h2 {
     background-color: #cfcfcf;
     width: 60px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.x::after {
+    content: 'X';
+}
+
+.o::after {
+    content: 'O';
+}
+
+.block:not(.disabled):hover {
+    background: #eee;
+}
+
+.disabled {
+    cursor: not-allowed;
 }
