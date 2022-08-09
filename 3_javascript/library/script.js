@@ -1,4 +1,4 @@
-// Library array
+// Library
 let myLibrary = [];
 
 // Form modal
@@ -28,9 +28,18 @@ const btnShowLibrary = document.getElementById('showLibrary');
 const btnAddBook = document.getElementById('addBook');
 
 // Book constructor
-function Book(title, author, pages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.isRead = isRead;
+// function Book(title, author, pages, isRead) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.isRead = isRead;
+// }
+
+class Book {
+    constructor(title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
+    }
 }
