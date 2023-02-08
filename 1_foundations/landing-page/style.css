@@ -42,6 +42,7 @@ nav ul{
 
 nav ul li{
     padding: 1em;
+	text-align: center;
 }
 
 .header-links {
@@ -126,10 +127,10 @@ blockquote {
 	}
 }
 
-/* call-to-action */
-
+/* CALL TO ACTION */
 .call-to-action {
-	height: 400px;
+	max-height: 100%;
+	padding: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -139,16 +140,18 @@ blockquote {
 	background-color: #3882F6;
 	border-radius: 8px;
 	color: #fff;
-	height: 150px;
+	padding: 2rem;
+	max-height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	flex: 0 1 1250px;	
+	flex: 0 1 100%;	
 }
 
 .container h2 {
-	margin-bottom: 0;
+	text-align: center;
+	margin: 1rem;
 }
 
 button {
@@ -158,7 +161,8 @@ button {
 	border-radius: 8px;
 	width: 100px;
 	height: 36px;
-	margin-bottom: 20px;
+	margin-top: .5rem;
+	margin-bottom: 1.5rem;
 }
 
 button:hover {
@@ -166,8 +170,7 @@ button:hover {
 	background-color: #fff;
 }
 
-/* footer */
-
+/* FOOTER */
 footer {
 	color: #fff;
 	font-size: 18px;
